@@ -21,7 +21,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "locutus": "^2.0.10",
     "request": "latest",
     "tempnam": "^1.1.0"
   },
