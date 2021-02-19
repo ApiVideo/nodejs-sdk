@@ -102,6 +102,7 @@ describe('Lives ressource', () => {
           hls: 'https://live.api.video/live/lix1x1x1x1x1x1x1x1x1x.m3u8',
           thumbnail: 'https://cdn.api.video/live/lix1x1x1x1x1x1x1x1x1x/thumbnail.jpg',
         },
+        public: undefined,
       };
       const live = client.lives.cast(data);
       expect(live).to.deep.equal(data);
