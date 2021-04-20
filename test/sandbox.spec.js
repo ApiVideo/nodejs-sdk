@@ -152,7 +152,13 @@ const timeout = (ms = 100) => new Promise((resolve) => {
     });
 
     // Create a live
-    const { liveStreamId } = await client.lives.create('This is a live');
+    const name = 'This is a live';
+    const { liveStreamId } = await client.lives.create(name);
+
+    // Update live thumbnail
+    await client.lives.uploadThumbnail('test/data/test.d', liveStreamId).then((live) => {
+      expect(live.name).to.equals(name);
+    });
 
     // Get live Analytics Data for the current year
     await client.analyticsLive.get(liveStreamId, new Date().getFullYear()).then((analyticLive) => {
