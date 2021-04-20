@@ -156,7 +156,7 @@ const timeout = (ms = 100) => new Promise((resolve) => {
     const { liveStreamId } = await client.lives.create(name);
 
     // Update live thumbnail
-    await client.lives.uploadThumbnail('test/data/test.d', liveStreamId).then((live) => {
+    await client.lives.uploadThumbnail('test/data/test.jpg', liveStreamId).then((live) => {
       expect(live.name).to.equals(name);
     });
 
