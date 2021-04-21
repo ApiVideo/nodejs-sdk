@@ -1,6 +1,10 @@
 # Changelog
 All changes to this project will be documented in this file.
 
+## [1.10.3] - 2021-04-21
+Fix upload requests which were hanging forever when called without an `Authorization` header.
+> Thanks to @beurnii for the report
+
 ## [1.10.2] - 2021-02-19
 - Add `public` property to a `Live`
 
